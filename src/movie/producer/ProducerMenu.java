@@ -34,7 +34,7 @@ public class ProducerMenu {
 
 		display.showCreateMovieTitle();
 		title = InputUtils.getString();
-		display.showCreateMovieRunningTime();
+		display.showCreateMovieRunningTime(title);
 		runningTime = InputUtils.getInt();
 		
 		source.addMovie(title, runningTime);

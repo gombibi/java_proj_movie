@@ -45,7 +45,30 @@
 	
 
 		
+movie (project)
+	admin(feature)
+		account(feature)
+		department(feature)
+		outcome(feature)
+	producer(feature)
+	customer(feature)
 		
+	utils(utils)
+	main(start)
+
+		
+
+feature
+	view - console, menu
+	source - business logic 
+	data - data class
+	
+	
+	화면 db.txt에 접근하고싶다
+	
+	화면 -> datasource -> file접근
+	
+	
 	
 		 
 		

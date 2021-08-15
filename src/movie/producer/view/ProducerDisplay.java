@@ -8,11 +8,12 @@ import movie.producer.data.Movie;
 public class ProducerDisplay {
 
 	public void showMenu() {
-		System.out.println("===영화 제작===");
-		System.out.println("메뉴선택");
+		System.out.println("Thank you for visiting BIBIMOVIE");
+		System.out.println("원하는 메뉴를 선택하세요");
+		System.out.println("-----------------------------------------------");
 		System.out.println(ProducerMenuConst.MENU_MOVIE_CREATE + ".영화 등록");
 		System.out.println(ProducerMenuConst.MENU_SHOW_MOVIE_LIST + ".영화 리스트 보기");
-		System.out.println("=============");
+		System.out.println("-----------------------------------------------");
 	}
 	
 	public void showMenuError() {
@@ -20,11 +21,12 @@ public class ProducerDisplay {
 	}
 	
 	public void showCreateMovieTitle() {
-		System.out.println("영화제목을 입력해주세요.");
+		System.out.println("Please type a movie info you want to register");
+		System.out.println("What is the movie title?");
 	}
 	
-	public void showCreateMovieRunningTime() {
-		System.out.println("런닝시간(분)을 입력해주세요.");
+	public void showCreateMovieRunningTime(String title) {
+		System.out.println("2. what is the running time(min) of " + title + " ?");
 	}
 	
 	public void showMovieListSubject() {
