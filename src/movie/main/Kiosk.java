@@ -48,8 +48,7 @@ public class Kiosk {
 			runAdminMeun();
 
 		case "3":
-			runProdMenu1();
-			runProdMenu2();
+			producerMenu.run();
 
 		default:
 			System.out.println("잘못된 입력입니다. 다시 입력해주세요");
@@ -118,41 +117,6 @@ public class Kiosk {
 		}
 	}
 	
-	// Production 메뉴
-		public String runProdMenu1() {
-			String typeMovieTitle = "";
-			Scanner sc = new Scanner(System.in);
 
-			System.out.println("Thank you for visiting BIBIMOVIE");
-			System.out.println("Please type a movie info you want to register");
-			System.out.println("-----------------------------------------------");
-			System.out.println("1. What is the movie title?");
-			System.out.println("-----------------------------------------------");
-
-			try {
-				typeMovieTitle = sc.nextLine();
-
-			} catch (Exception e) {
-				System.out.println("잘못된 입력입니다" + e.getMessage());
-			}
-			return typeMovieTitle;
-		}
-
-		public String runProdMenu2() {
-			String typeRunningTime = "";
-			Scanner sc = new Scanner(System.in);
-
-			System.out.println("-----------------------------------------------");
-			System.out.println("2. what is the running time of " + runProdMenu1() + " ?");
-			System.out.println("-----------------------------------------------");
-
-			try {
-				typeRunningTime = sc.nextLine();
-
-			} catch (Exception e) {
-				System.out.println("잘못된 입력입니다" + e.getMessage());
-			}
-			return typeRunningTime;
-		}
 
 }
