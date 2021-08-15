@@ -1,1 +1,15 @@
-[{"aa":"aa","c":null},{"aa":"aa1","c":null},{"aa":"aa2","c":null}]
+{
+  "movies" : [ {
+    "title" : "바람과함께 사라졌다",
+    "runningTime" : 120,
+    "createBy" : 1629048546629
+  }, {
+    "title" : "사장님 여기서 이러시면 곤란해요",
+    "runningTime" : 120,
+    "createBy" : 1629048708415
+  }, {
+    "title" : "내가 먹다 남은 치즈를 대체 누가 옮겻을까?",
+    "runningTime" : 180,
+    "createBy" : 1629048743711
+  } ]
+}
