@@ -1,6 +1,7 @@
 package movie.main;
 
 import movie.admin.account.source.AdminDataSource;
+import movie.producer.ProducerMenu;
 
 public class TestMain {
 
@@ -18,5 +19,8 @@ public class TestMain {
 		System.out.println(source.login("test", "1234"));
 		System.out.println(source.login("test2", "1234"));
 		
+		
+		ProducerMenu menu = new ProducerMenu();
+		menu.run();
 	}
 }
