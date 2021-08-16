@@ -9,10 +9,10 @@ public class ProducerDisplay {
 
 	public void showMenu() {
 		System.out.println("Thank you for visiting BIBIMOVIE");
-		System.out.println("원하는 메뉴를 선택하세요");
+		System.out.println("담당자님, 원하는 메뉴를 선택하세요");
 		System.out.println("-----------------------------------------------");
-		System.out.println(ProducerMenuConst.MENU_MOVIE_CREATE + ".영화 등록");
-		System.out.println(ProducerMenuConst.MENU_SHOW_MOVIE_LIST + ".영화 리스트 보기");
+		System.out.println(ProducerMenuConst.MENU_MOVIE_CREATE + ". 영화 등록");
+		System.out.println(ProducerMenuConst.MENU_SHOW_MOVIE_LIST + ". 영화 리스트 보기");
 		System.out.println("-----------------------------------------------");
 	}
 	

@@ -28,4 +28,6 @@ public class AdminAccount  {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
+	
+	
 }

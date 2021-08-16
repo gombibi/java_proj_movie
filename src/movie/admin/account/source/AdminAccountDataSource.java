@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import movie.admin.account.data.AdminAccount;
 import movie.utils.IOUtils;
 
-public class AdminDataSource {
+public class AdminAccountDataSource {
 	private static final String FILE_NAME = "admin_account_list.txt";
 	
 	public boolean addAdminAccount(String id, String pw) {
@@ -23,18 +23,7 @@ public class AdminDataSource {
 		IOUtils.fileWriter(list, FILE_NAME);
 		return true;
 	}
-	
-	public void removeAdminAccount(String id) {
-		ArrayList<AdminAccount> list = getDbList();
-		for (AdminAccount adminAccount : list) {
-			if(adminAccount.getId().equals(id)) {
-				list.remove(adminAccount);
-				break;
-			}
-		}
-		IOUtils.fileWriter(list, FILE_NAME);
-	}
-	
+		
 	public boolean login(String id, String pw) {
 		ArrayList<AdminAccount> list = getDbList();
 		for (AdminAccount adminAccount : list) {
