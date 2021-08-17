@@ -1,7 +1,7 @@
 package movie.admin.account.view;
 
 import movie.admin.account.source.AdminAccountDataSource;
-import movie.admin.manage.view.AdminManageMenu;
+import movie.admin.account.source.Session;
 import movie.utils.InputUtils;
 
 public class AdminAccountMenu {
@@ -14,11 +14,17 @@ public class AdminAccountMenu {
 			aDisplay.showMenu();
 			switch (InputUtils.getInt()) {
 			case AdminAccountMenuConst.MENU_ADMIN_LOGIN: {
-				login();
+				boolean result = login();
+				if(result) {
+					return;
+				}
 				break;
 			}
 			case AdminAccountMenuConst.MENU_ADMIN_JOININ: {
-				joinin();
+				boolean result = joinin();
+				if(result) {
+					return;
+				}
 				break;
 			}
 			default:
@@ -27,7 +33,7 @@ public class AdminAccountMenu {
 		}
 	}
 
-	private void login() {
+	private boolean login() {
 		String id = "";
 		String pw = "";
 		boolean loginSuccess;
@@ -40,16 +46,16 @@ public class AdminAccountMenu {
 		loginSuccess = adSource.login(id, pw);
 		
 		if(loginSuccess) {
+			Session.getInstance().login(id, pw);
 			System.out.println(id + "님! 로그인되셨습니다.");
-			AdminManageMenu adminManageMenu = new AdminManageMenu();
-			adminManageMenu.run();
-			
+			return true;
 		}else {
 			aDisplay.showMenuError();
+			return false;
 		}
 	}
 
-	private void joinin() {
+	private boolean joinin() {
 		String id = "";
 		String pw = "";
 		boolean joinSuccess;
@@ -63,11 +69,12 @@ public class AdminAccountMenu {
 
 		if (joinSuccess) {
 			System.out.println(id + "님! 회원가입 되셨습니다.");
-			
+			Session.getInstance().login(id, pw);
 			//회원 메뉴로 연결
-			
+			return true;
 		} else {
 			System.out.println(id + "는 이미 있는 id입니다");
+			return false;
 		}
 	}
 

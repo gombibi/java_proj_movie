@@ -1,13 +1,5 @@
 package movie.main;
 
-import java.util.ArrayList;
-
-import com.fasterxml.jackson.core.type.TypeReference;
-
-import movie.admin.account.view.AdminAccountMenu;
-import movie.admin.manage.view.AdminManageMenu;
-import movie.utils.IOUtils;
-
 public class TestMain {
 
 	public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package movie.main;
 
 import movie.admin.account.view.AdminAccountMenu;
+import movie.admin.manage.view.AdminManageMenu;
 import movie.customer.CustomerMenu;
 import movie.producer.ProducerMenu;
 import movie.utils.InputUtils;
@@ -10,6 +11,7 @@ public class MainMenu {
 	MainMenuDisplay mDisplay = new MainMenuDisplay();
 	CustomerMenu cMenu = new CustomerMenu();
 	ProducerMenu pMenu = new ProducerMenu();
+	AdminManageMenu adminManageMenu = new AdminManageMenu();
 	AdminAccountMenu aMenu = new AdminAccountMenu();
 
 	// 메인 메뉴
@@ -23,7 +25,7 @@ public class MainMenu {
 				break;
 
 			case MainMenuConst.MENU_ADMINISTRATOR:
-						
+				adminManageMenu.run();
 				aMenu.run();
 				break;
 
