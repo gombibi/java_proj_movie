@@ -19,4 +19,8 @@ public class AdminManageDisplay {
 	public void showlogout() {
 		System.out.println("로그아웃되셨습니다.");
 	}
+	
+	public void showWithdraw() {
+		System.out.println("탈퇴 되셨습니다.");
+	}
 }

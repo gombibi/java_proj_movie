@@ -33,6 +33,7 @@ public class AdminManageMenu {
 				
 			case AdminManageMenuConst.MENU_WITHDRAW:
 				withdraw();
+				amDisplay.showWithdraw();
 				break;
 				
 			default:amDisplay.showMenuError();
