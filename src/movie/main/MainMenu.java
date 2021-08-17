@@ -12,7 +12,6 @@ public class MainMenu {
 	CustomerMenu cMenu = new CustomerMenu();
 	ProducerMenu pMenu = new ProducerMenu();
 	AdminManageMenu adminManageMenu = new AdminManageMenu();
-	AdminAccountMenu aMenu = new AdminAccountMenu();
 
 	// 메인 메뉴
 
@@ -26,7 +25,6 @@ public class MainMenu {
 
 			case MainMenuConst.MENU_ADMINISTRATOR:
 				adminManageMenu.run();
-				aMenu.run();
 				break;
 
 			case MainMenuConst.MENU_PRODUCTION:
